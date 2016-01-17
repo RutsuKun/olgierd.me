@@ -1,64 +1,41 @@
 <!DOCTYPE html>
 <!-- Hello. -->
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Olgierd Grzyb</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-        <style>
-            html {
-                display: table;
-                width: 100%;
-                height: 100%;
-            }
-            body {
-                background: #333;
-                color: #fff;
-                font: 10vh 'PT Serif', Century, Georgia, 'Liberation Serif', serif;
-                display: table-row;
-            }
-            div {
-                display: table-cell;
-                text-align: center;
-                vertical-align: middle;
-            }
-            p {
-                animation-iteration-count: 1;
-                animation-duration: 1.5s;
-                animation-delay: 0;
-                animation-name: fall;
-                animation-timing-function: linear;
-            }
-            @-webkit-keyframes fall {
-                0% {
-                    opacity: 0;
-                    padding-bottom: 3vh;
-                }
-                33% {
-                    opacity: 0;
-                }
-                100% {
-                    padding-bottom: 0;
-                    opacity: 1;
-                }
-            }
-            @keyframes fall {
-                0% {
-                    opacity: 0;
-                    padding-bottom: 3vh;
-                }
-                33% {
-                    opacity: 0;
-                }
-                100% {
-                    padding-bottom: 0;
-                    opacity: 1;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div><p>Soon.</p></div>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Olgierd Grzyb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/master.css" media="screen">
+    <link rel="stylesheet" href="/css/icons.css" media="screen">
+  </head>
+  <body>
+    <header class="Header u-clearfix">
+      <h1 class="Header-title"><a href="/">Olgierd Grzyb</a></h1>
+      <p class="Header-slogan">Deleted code is debugged code.</p>
+    </header>
+    <main>
+      <section id="about" class="Box">
+        <h2 class="Box-title">O mnie</h2>
+        <p>Jestem studentem. W&nbsp;kręgu moich zainteresowań leży przede wszystkim <strong>web development</strong>, czyli potocznie – <i>robienie internetów</i>, a&nbsp;także systemy Linux. Mieszkam w&nbsp;uroczej metropolii o&nbsp;nazwie <a href="https://pl.wikipedia.org/wiki/Rzeszów">Rzeszów</a>.</p>
+      </section>
+      <section id="contact" class="Box">
+        <h2 class="Box-title">Ja w internecie</h2>
+        <dl class="Contact">
+          <dt class="icon-writing">Blog</dt>
+          <dd><a href="/blog">Blog</a></dd>
+          <dt class="icon-github">GitHub</dt>
+          <dd><a href="https://github.com/winek">winek</a></dd>
+          <dt class="icon-email">Email</dt>
+          <dd id="email"><a href="/hello">Zapytaj</a></dd>
+        </dl>
+      </section>
+    </main>
+    <footer class="Footer">
+      <p>
+        W tworzeniu tej strony niezwykle pomocni byli <a href="http://atom.io/">Atom</a> i&nbsp;<a href="https://icomoon.io/">IcoMoon</a>.<br>
+        Copyright &copy; 2016 Olgierd Grzyb.
+      </p>
+    </footer>
+    <script src="js/common.js"></script>
+  </body>
 </html>
