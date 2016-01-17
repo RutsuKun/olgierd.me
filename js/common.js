@@ -16,7 +16,8 @@ var WebFontConfig = {
     if (id) {
       anchor = document.createElement('a');
       anchor.className = 'Box-anchor';
-      anchor.textContent = anchor.href = '#' + id;
+      anchor.href = '#' + id;
+      anchor.textContent = '¶';
       titleHeader.appendChild(anchor);
     }
   });
