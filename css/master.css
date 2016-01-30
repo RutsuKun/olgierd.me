@@ -24,6 +24,9 @@ a:hover {
   display: table;
   clear: both;
 }
+.Header {
+  display: block;
+}
 .Header-title {
   float: left;
   margin: .5em 0 .25em 0;
@@ -40,6 +43,7 @@ a:hover {
 
 .Box {
   background: #444;
+  text-align: justify;
   padding: 1.5em;
   margin: 1em 0;
   border-bottom: 5px #222 solid;
@@ -110,4 +114,11 @@ dd a {
   .Contact dt {
     clear: none;
   }
+}
+
+#contact {
+  border-top: 8px #3bd solid;
+}
+#about {
+  border-top: 8px #9c3 solid;
 }
