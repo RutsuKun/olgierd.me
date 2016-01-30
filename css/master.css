@@ -43,7 +43,7 @@ a:hover {
   text-align: justify;
   padding: 1.5em;
   margin: 1em 0;
-  border-bottom: 5px #222 solid;
+  border-bottom: 4px #222 solid;
 }
 .Box-title {
   margin: 0;
@@ -79,21 +79,22 @@ a:hover {
   position: static;
 }
 
-.Contact dt {
+.Contact {
+  list-style: none;
+  padding: 0;
+}
+.Contact .u-icon {
+  color: #eee;
+  display: inline-block;
   text-align: center;
-  clear: left;
-  float: left;
-  max-width: 1em;
-  max-height: 1.9em;
+  width: 1em;
+  max-height: 1.5em;
+  margin-right: .25em;
+  vertical-align: middle;
   overflow: hidden;
 }
-.Contact dd {
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-dd a {
-  padding: 0 1.25em 0 1.25em;
+.Contact a {
+  padding: 0 1em;
   margin-left: -1em;
 }
 
@@ -105,8 +106,8 @@ dd a {
   .Box:first-of-type {
     font-size: 1.2em;
   }
-  .Contact dt {
-    clear: none;
+  .Contact li {
+    display: inline-block;
   }
 }
 

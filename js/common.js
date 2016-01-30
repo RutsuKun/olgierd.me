@@ -18,8 +18,10 @@ var WebFontConfig = {
     document.getElementsByClassName('Header-fortuneText')[0].textContent = fortune;
   }
 
+  var forEach = Function.prototype.call.bind(Array.prototype.forEach);
+
   function addSectionAnchors() {
-    [].forEach.call(document.getElementsByTagName('h2'), function(titleHeader) {
+    forEach(document.getElementsByTagName('h2'), function(titleHeader) {
       var id = titleHeader.parentNode.id,
           anchor;
 
@@ -34,9 +36,16 @@ var WebFontConfig = {
   }
 
   function showEmail() {
-    var email = document.getElementById('email');
-    email.firstChild.textContent = ['.me', 'olgierd'].concat(['@'].concat('kontakt')).reverse().join('');
-    email.firstChild.href = [email.firstChild.textContent, 'mailto'].reverse().join(':');
+    forEach(document.getElementsByClassName('u-contactLink'), function(link) {
+      var icon = link.getElementsByClassName('u-icon')[0];
+      
+      link.textContent = ['.me', 'olgierd'].concat(['@'].concat('kontakt')).reverse().join('');
+      link.href = [link.textContent, 'mailto'].reverse().join(':');
+      
+      if (icon) {
+        link.insertBefore(icon, link.firstChild);
+      }
+    });
   }
   
   showEmail();
