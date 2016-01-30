@@ -1,5 +1,5 @@
 var WebFontConfig = {
-  google: { families: [ 'Source+Serif+Pro:400,700:latin,latin-ext' ] }
+  google: { families: [ 'PT+Serif:400,700:latin,latin-ext' ] }
 };
 (function() {
   var wf = document.createElement('script');
@@ -8,6 +8,13 @@ var WebFontConfig = {
   wf.async = 'true';
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(wf, s);
+
+  var fortunes = [
+    'Deleted code is debugged code.',
+    'The cheapest, fastest, and most reliable components are those that aren’t there.'
+  ];
+  var fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+  document.getElementsByClassName('Header-fortuneText')[0].textContent = fortune;
 
   [].forEach.call(document.getElementsByTagName('h2'), function(titleHeader) {
     var id = titleHeader.parentNode.id,
