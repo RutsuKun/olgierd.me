@@ -30,7 +30,7 @@ var WebFontConfig = {
         anchor.className = 'Box-anchor';
         anchor.href = '#' + id;
         anchor.textContent = '¶';
-        titleHeader.appendChild(anchor);
+        titleHeader.parentNode.insertBefore(anchor, titleHeader);
       }
     });
   }
@@ -38,16 +38,16 @@ var WebFontConfig = {
   function showEmail() {
     forEach(document.getElementsByClassName('u-contactLink'), function(link) {
       var icon = link.getElementsByClassName('u-icon')[0];
-      
+
       link.textContent = ['.me', 'olgierd'].concat(['@'].concat('kontakt')).reverse().join('');
       link.href = [link.textContent, 'mailto'].reverse().join(':');
-      
+
       if (icon) {
         link.insertBefore(icon, link.firstChild);
       }
     });
   }
-  
+
   showEmail();
   setRandomFortune();
   addSectionAnchors();

@@ -4,7 +4,7 @@ body {
   margin: 0 auto;
   background: #333;
   color: #eee;
-  font: 1.25em 'PT Serif', Century, Georgia, 'Liberation Serif', serif;
+  font: 1.1em 'PT Serif', Century, Georgia, 'Liberation Serif', serif;
   line-height: 1.5;
 }
 a {
@@ -29,24 +29,25 @@ a:hover {
   text-align: center;
 }
 .Header-title {
-  margin: .5em 0 .25em 0;
-  line-height: 1.2;
+  margin: .5em 0 0 0;
+  line-height: 1;
   font-size: 3em;
 }
 .Header-fortune {
-  margin: .5em 0;
+  margin: .25em 0;
   color: #777;
 }
 
 .Box {
+  border-top: 8px #eee solid;
   background: #444;
-  text-align: justify;
-  padding: 1.5em;
+  padding: 1.25em;
   margin: 1em 0;
   border-bottom: 4px #222 solid;
 }
 .Box-title {
   margin: 0;
+  font-size: 1.7em;
 }
 .Box p {
   margin: 0;
@@ -67,7 +68,7 @@ a:hover {
 
 .Box-anchor {
   color: #777;
-  font-size: .7em;
+  font-size: 1.25em;
   float: right;
   line-height: 1.4;
   position: absolute;
@@ -82,6 +83,7 @@ a:hover {
 .Contact {
   list-style: none;
   padding: 0;
+  margin: .5em 0;
 }
 .Contact .u-icon {
   color: #eee;
@@ -99,11 +101,14 @@ a:hover {
 }
 
 @media screen and (min-width: 641px) {
+  body {
+    font-size: 1.25em;
+  }
   .Header-fortune {
     font-size: 1.25em;
-    margin: 1em 0;
+    margin: .75em 0;
   }
-  .Box:first-of-type {
+  #o-mnie p {
     font-size: 1.2em;
   }
   .Contact li {
@@ -111,9 +116,63 @@ a:hover {
   }
 }
 
-#contact {
-  border-top: 8px #3bd solid;
+#o-mnie {
+  border-top-color: #9c3;
 }
-#about {
-  border-top: 8px #9c3 solid;
+#kontakt {
+  border-top-color: #3bd;
+}
+
+#strony {
+  border-top-color: #da3;
+}
+#strony .Project-link:first-child {
+  background: #da3;
+}
+
+#aplikacje {
+  border-top-color: #e74;
+}
+#aplikacje .Project-link:first-child {
+  background: #e74;
+}
+
+.Project {
+  padding: 1em 1.25em;
+  margin: 1em -1.25em;
+  background: #555;
+  border-bottom: 2px #333 solid;
+}
+.Project-name {
+  font-size: 1.5em;
+  margin: 0;
+}
+.Project-details {
+  margin: .75em 0;
+}
+.Project .Project-links {
+  margin: .5em 0;
+  text-indent: 0;
+}
+.Project-link {
+  font-size: .85em;
+  display: inline-block;
+  background: #777;
+  opacity: .8;
+  color: #fff;
+  padding: .5em .75em;
+  border-bottom: 4px #444 solid;
+}
+.Project-link:first-child {
+  font-weight: bold;
+  opacity: .9;
+}
+.Project-link:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.u-srOnly {
+  position: absolute;
+  clip: rect(0 0 0 0);
 }
