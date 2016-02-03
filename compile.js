@@ -5,13 +5,13 @@ var fs = require('fs');
 var path = require('path');
 var config = require('./config.json');
 var fm = require('front-matter');
-var root = __dirname;
+var partialsDir = __dirname + '/partials/';
 var partials = {};
 
-fs.readdirSync(root + '/private')
+fs.readdirSync(partialsDir)
   .filter(filename => filename.match(/\.mustache$/))
   .forEach(filename => {
-    partials[path.basename(filename, '.mustache')] = fs.readFileSync(root + '/private/' + filename, 'UTF-8');
+    partials[path.basename(filename, '.mustache')] = fs.readFileSync(partialsDir + filename, 'UTF-8');
   });
 var input = '';
 
