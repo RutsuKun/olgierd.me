@@ -1,6 +1,6 @@
 ---
 title: "Zmiana hasła użytkownika Windows - Linuksem"
-description: ""
+description: "Odzyskaj dostęp do systemu w kilku prostych krokach"
 ---
 
 Jeśli zgubiliśmy hasło do systemu Windows, w&nbsp;odzyskaniu (a&nbsp;właściwie zmianie) go może nam pomóc płyta z&nbsp;Linuksem i&nbsp;programem chntpw. Omówię proces resetowania hasła na przykładzie LiveDVD Ubuntu 14.04 (dowolna inna wersja prawdopodobnie także zadziała). Wypalamy ściągnięte Ubuntu na płytkę i&nbsp;uruchamiamy z&nbsp;niej komputer. Gdy pokaże się pulpit, wybieramy opcję *Try Ubuntu* (*Wypróbuj Ubuntu*).
