@@ -1,8 +1,9 @@
 ---
 title: "Zmiana hasła użytkownika Windows - Linuksem"
+description: ""
 ---
 
-Jeśli zgubiliśmy hasło do naszego Windowsa, w odzyskaniu (a właściwie zmianie) go może nam pomóc płyta z Linuksem i programem chntpw. Omówię proces resetowania hasła na przykładzie LiveDVD Ubuntu 14.04 (dowolna inna wersja prawdopodobnie także zadziała). Wypalamy ściągnięte Ubuntu na płytkę i uruchamiamy z niej komputer. Gdy pokaże się pulpit, wybieramy opcję *Try Ubuntu* (*Wypróbuj Ubuntu*).
+Jeśli zgubiliśmy hasło do systemu Windows, w&nbsp;odzyskaniu (a&nbsp;właściwie zmianie) go może nam pomóc płyta z&nbsp;Linuksem i&nbsp;programem chntpw. Omówię proces resetowania hasła na przykładzie LiveDVD Ubuntu 14.04 (dowolna inna wersja prawdopodobnie także zadziała). Wypalamy ściągnięte Ubuntu na płytkę i&nbsp;uruchamiamy z&nbsp;niej komputer. Gdy pokaże się pulpit, wybieramy opcję *Try Ubuntu* (*Wypróbuj Ubuntu*).
 
 Otwieramy terminal (`Ctrl+Alt+T`) oraz wpisujemy:
 
@@ -18,7 +19,7 @@ apt-get install chntpw
 
 aby zainstalować narzędzie.
 
-Teraz przyda nam się nazwa partycji z systemem Windows. Wydajemy polecenie:
+Teraz przyda nam się nazwa partycji z&nbsp;systemem Windows. Wydajemy polecenie:
 
 ```bash
 ls -l /dev/disk/by-label
@@ -26,7 +27,7 @@ ls -l /dev/disk/by-label
 
 mój wynik to:
 
-```bash
+```
 lrwxrwxrwx 1 root root 10 11-10 20:39 Arch -> ../../sda1
 lrwxrwxrwx 1 root root 10 11-10 20:39 Home -> ../../sda2
 lrwxrwxrwx 1 root root 10 11-10 20:39 Windows -> ../../sda3
@@ -45,7 +46,7 @@ Wydajemy polecenie:
 chntpw /media/windows/Windows/System32/config/SAM
 ```
 
-i postępujemy zgodnie z instrukcjami programu.
+i postępujemy zgodnie z&nbsp;instrukcjami programu.
 
 ### A co w Linuksie?
 
