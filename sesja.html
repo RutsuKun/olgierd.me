@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -86,18 +87,11 @@
         during: 'Do końca sesji pozostało...'
       };
 
-
       var startTime = new Date(2016, 0, 26).getTime() / 1000;
       var endTime = new Date(2016, 1, 16).getTime() / 1000;
       var gaps = {}, messageGaps = [].slice.call(document.getElementsByClassName('message'));
 
-      [
-        'months',
-        'days',
-        'hours',
-        'minutes',
-        'seconds'
-      ].forEach(function (id) {
+      ['months', 'days', 'hours', 'minutes', 'seconds'].forEach(function(id) {
         gaps[id] = document.getElementById(id);
       });
 
@@ -125,8 +119,7 @@
       }());
 
       function format(value) {
-        value = value >> 0;
-        if (value < 10) {
+        if (value >> 0 < 10) {
           return '0' + value;
         }
         return String(value);
