@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title class="message">Ile do sesji?</title>
+    <style>
+      body {
+        background-color: #f8f8f8;
+        color: #444;
+        margin: 40px;
+        font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .timer {
+        text-align: center;
+      }
+      .timer span {
+        text-align: center;
+        font-size: 6em;
+        line-height: 1;
+        padding: 30px;
+        margin: 5px 15px;
+        display: inline-block;
+        position: relative;
+      }
+      .timer span:after {
+        color: #777;
+        font-size: .2em;
+        font-weight: bold;
+        display: block;
+      }
+      h1 {
+        color: #666;
+        text-align: center;
+        font-size: 1.75em;
+        margin-bottom: 0;
+      }
+      @media screen and (min-width: 69em) {
+        .timer span + span:before {
+          color: #fff;
+          font-size: 1em;
+          line-height: 1;
+          position: absolute;
+          left: -32px;
+          top: 30px;
+        }
+      }
+      #months:after { content: 'miesięcy'; }
+      #days:after { content: 'dni'; }
+      #hours:after { content: 'godzin'; }
+      #minutes:after { content: 'minut'; }
+      #seconds:after { content: 'sekund'; }
+
+			footer {
+				color: #fff;
+				font-size: 0.85em;
+				margin-top: 40px;
+				margin-bottom: -35px;
+				text-align: right;
+			}
+
+			footer a {
+				color: #fff;
+				font-weight: bold;
+				text-decoration: none;
+			}
+
+			footer a:hover {
+				text-decoration: underline;
+			}
+    </style>
+  </head>
+  <body>
+    <h1 class="message"></h1>
+    <div class="timer">
+      <span id="months">00</span>
+      <span id="days">00</span>
+      <span id="hours">00</span>
+      <span id="minutes">00</span>
+      <span id="seconds">00</span>
+    </div>
+    <script>
+      var messages = {
+        before: 'Do rozpoczęcia sesji pozostało...',
+        during: 'Do końca sesji pozostało...'
+      };
+
+
+      var startTime = new Date(2016, 0, 26).getTime() / 1000;
+      var endTime = new Date(2016, 1, 16).getTime() / 1000;
+      var gaps = {}, messageGaps = [].slice.call(document.getElementsByClassName('message'));
+
+      [
+        'months',
+        'days',
+        'hours',
+        'minutes',
+        'seconds'
+      ].forEach(function (id) {
+        gaps[id] = document.getElementById(id);
+      });
+
+      (function updateDate() {
+        var nowTime = new Date() / 1000;
+        var delta = startTime - nowTime;
+        var message = messages.before;
+
+        if (delta < 0) {
+          delta += endTime - startTime;
+          message = messages.during;
+        }
+
+        gaps.seconds.textContent = format(delta % 60);
+        gaps.minutes.textContent = format(delta / 60 % 60);
+        gaps.hours.textContent = format(delta / 60 / 60 % 24);
+        gaps.days.textContent = format(delta / 60 / 60 / 24 % 30);
+        gaps.months.textContent = format(delta / 24 / 60 / 60 / 30);
+
+        messageGaps.forEach(function(gap) {
+          gap.textContent = message;
+        });
+
+        setTimeout(updateDate, 1000);
+      }());
+
+      function format(value) {
+        value = value >> 0;
+        if (value < 10) {
+          return '0' + value;
+        }
+        return String(value);
+      }
+    </script>
+  </body>
+</html>

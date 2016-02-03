@@ -1,0 +1,6 @@
+# Build dependencies
+node_modules
+
+# Generated HTML files
+/*.html
+!sesja.html
