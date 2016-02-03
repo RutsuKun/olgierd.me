@@ -1,7 +1,7 @@
 # Build dependencies
 node_modules
 
-# Generated HTML files
-/static/*.html
-!/static/sesja.html
+# Generated files
+/static/*/index.html
+/static/index.html
 /static/css/style.css
