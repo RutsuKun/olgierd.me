@@ -4,6 +4,7 @@
     "cli-interval": "^1.0.0",
     "front-matter": "^2.0.5",
     "http-server": "^0.8.5",
+    "marked": "^0.3.5",
     "mustache": "^2.2.1"
   }
 }

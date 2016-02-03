@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{description}}">
     <title>{{^frontpage}}{{title}} &middot; {{/frontpage}}Olgierd Grzyb</title>
-    <link rel="stylesheet" href="/css/master.css" media="screen">
-    <link rel="stylesheet" href="/css/icons.css" media="screen">
+    <link rel="stylesheet" href="/css/style.css" media="screen">
+    {{#stylesheets}}
+    <link rel="stylesheet" href="{{url}}">
+    {{/stylesheets}}
   </head>
   <body>
     <header class="Header u-clearfix">
