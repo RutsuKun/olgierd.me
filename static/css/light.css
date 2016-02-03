@@ -1,0 +1,32 @@
+body {
+  color: #444;
+  background: #eee;
+}
+
+a {
+  color: #39c;
+}
+a:hover {
+  color: #28b;
+}
+
+.Header-title a {
+  color: #333;
+}
+.Header-title a:hover {
+  text-decoration: none;
+  color: #39c;
+}
+.Header-fortune {
+  color: #aaa;
+}
+
+.Box {
+  background: #fff;
+  border-bottom-color: #ddd;
+}
+
+pre {
+  background: #eee;
+  border-bottom: 4px #ddd solid;
+}

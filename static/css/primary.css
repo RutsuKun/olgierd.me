@@ -137,6 +137,10 @@ a:hover {
   background: #e74;
 }
 
+.Box--article {
+  border-top-color: #36c;
+}
+
 .Project {
   padding: 1em 1.25em;
   margin: 1em -1.25em;
@@ -175,4 +179,14 @@ a:hover {
 .u-srOnly {
   position: absolute;
   clip: rect(0 0 0 0);
+}
+
+pre {
+  background: #333;
+  padding: 1em;
+  margin-left: 1.5em;
+}
+.Box--article h3 {
+  font-size: 1.6em;
+  margin-bottom: 0;
 }
