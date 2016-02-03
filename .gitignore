@@ -2,5 +2,5 @@
 node_modules
 
 # Generated HTML files
-/*.html
-!sesja.html
+/static/*.html
+!/static/sesja.html

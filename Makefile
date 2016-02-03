@@ -1,25 +1,29 @@
 HTTP_SERVER = node_modules/.bin/http-server
 NODE        = node
 WATCH       = watch
-RM          = rm
+RM          = rm -rvf
 
 WFLAGS      = -n 1
 PORT        = 8080
 
-CONTENT     = index.html projekty.html
+OUTDIR      = static/
+CONTENT     = $(addprefix $(OUTDIR),index.html projekty.html)
 
 all: $(CONTENT)
 
+$(OUTDIR)%.html: content/%.html $(OUTDIR) config.json partials/footer.mustache partials/header.mustache
+	$(NODE) compile.js < $< > $@
+
+$(OUTDIR):
+	mkdir $(OUTDIR)
+
 server:
-	$(HTTP_SERVER) -p $(PORT)
+	$(HTTP_SERVER) -p $(PORT) $(OUTDIR)
 
 watch:
 	$(WATCH) $(WFLAGS) $(MAKE) all
 
-%.html: content/%.html config.json private/footer.mustache private/header.mustache
-	$(NODE) compile.js < $< > $@
-
 clean:
 	$(RM) $(CONTENT)
 
-.PHONY: server watch all clean
+.PHONY: server watch all clean copy
