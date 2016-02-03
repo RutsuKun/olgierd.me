@@ -7,8 +7,9 @@ PORT        = 8080
 
 OUTDIR      = static/
 CONTENT     = $(addprefix $(OUTDIR),index.html projekty.html haslo.html)
+OUTPUT      = $(CONTENT) $(OUTDIR)css/style.css
 
-all: $(CONTENT) $(OUTDIR)css/style.css
+all: $(OUTPUT)
 
 $(OUTDIR)css/style.css: $(OUTDIR)css/primary.css $(OUTDIR)css/icons.css
 	cat $^ > $@
@@ -29,6 +30,6 @@ watch:
 	$(WATCH) $(WFLAGS) $(MAKE) all
 
 clean:
-	rm -rvf $(CONTENT)
+	rm -rvf $(OUTPUT)
 
 .PHONY: server watch all clean copy
