@@ -18,11 +18,11 @@ $(OUTDIR)index.html: content/index.html $(OUTDIR) config.json partials/footer.mu
 	$(NODE) tools/compile.js < $< > $@
 
 $(OUTDIR)%/index.html: content/%.html $(OUTDIR) config.json partials/footer.mustache partials/header.mustache
-	mkdir -p static/$(*F)
+	mkdir -p $(OUTDIR)$(*F)
 	$(NODE) tools/compile.js < $< > $@
 
 $(OUTDIR)%/index.html: content/%.md $(OUTDIR) config.json partials/footer.mustache partials/header.mustache
-	mkdir -p static/$(*F)
+	mkdir -p $(OUTDIR)$(*F)
 	$(NODE) tools/compile-markdown.js < $< > $@
 
 $(OUTDIR):
