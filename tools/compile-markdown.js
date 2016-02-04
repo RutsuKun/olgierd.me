@@ -4,7 +4,7 @@ var mustache = require('mustache');
 var marked = require('marked');
 var fs = require('fs');
 
-var config = require('../config.json');
+var config = require('../config');
 var fm = require('front-matter');
 var partials = require('./get-partials');
 var template = fs.readFileSync(__dirname + '/markdown.mustache', 'UTF-8');

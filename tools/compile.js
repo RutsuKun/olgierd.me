@@ -2,7 +2,7 @@
 
 var mustache = require('mustache');
 
-var config = require('../config.json');
+var config = require('../config');
 var fm = require('front-matter');
 var partials = require('./get-partials');
 

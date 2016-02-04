@@ -7,6 +7,19 @@ title: "Strona główna"
   <h2 class="Box-title">O mnie</h2>
   <p>Jestem studentem. W&nbsp;kręgu moich zainteresowań leży przede wszystkim <strong>web development</strong>, czyli potocznie – <i>robienie internetów</i>, a&nbsp;także systemy Linux. Mieszkam w&nbsp;uroczej metropolii o&nbsp;nazwie <a href="https://pl.wikipedia.org/wiki/Rzeszów">Rzeszów</a>.</p>
 </section>
+<section id="teksty" class="Box">
+  <h2 class="Box-title">Teksty</h2>
+  <ul class="Writings">
+    {{#topWritings}}
+      <li class="Writing">
+        <a href="{{url}}">
+          <span class="Writing-title">{{title}}</span>
+          <span class="Writing-description">{{#description}}{{description}}{{/description}}</span>
+        </a>
+      </li>
+    {{/topWritings}}
+  </ul>
+</section>
 <section id="kontakt" class="Box">
   <h2 class="Box-title">Ja w internecie</h2>
   <ul class="Contact">
