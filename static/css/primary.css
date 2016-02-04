@@ -1,11 +1,10 @@
 body {
   max-width: 1000px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   background: #333;
   color: #eee;
-  font: 1.1em 'PT Serif', Century, Georgia, 'Liberation Serif', serif;
-  line-height: 1.5;
+  font: 1.1em/1.5 'PT Serif', Century, Georgia, 'Liberation Serif', serif;
 }
 a {
   color: #bebebe;
@@ -31,7 +30,7 @@ a:hover {
 .Header-title {
   margin: .5em 0 0 0;
   line-height: 1;
-  font-size: 3em;
+  font-size: 2.8em;
 }
 .Header-fortune {
   margin: .25em 0;
@@ -46,8 +45,9 @@ a:hover {
   border-bottom: 4px #222 solid;
 }
 .Box-title {
-  margin: 0;
+  margin: 0 0 .5em 0;
   font-size: 1.7em;
+  line-height: 1.13;
 }
 .Box p {
   margin: 0;
@@ -59,6 +59,8 @@ a:hover {
 
 .Footer {
   color: #666;
+  width: 90%;
+  margin: 0 auto;
   font-size: .7em;
   text-align: right;
 }
@@ -169,6 +171,7 @@ a:hover {
 }
 
 pre {
+  overflow-x: auto;
   background: #333;
   padding: 1em;
   margin-left: 1.5em;
@@ -227,5 +230,8 @@ code {
   }
   .Writings {
     font-size: 1.1em;
+  }
+  .Footer {
+    width: 100%;
   }
 }
