@@ -35,6 +35,33 @@ var WebFontConfig = {
     });
   }
 
+  function makeSectionsTogglable() {
+    function toggleBox(e) {
+      this.classList.toggle('Box--collapsed');
+    }
+
+    forEach(document.getElementsByClassName('Box-title'), function(titleHeader) {
+      var box = titleHeader.parentNode;
+
+      if (!box.querySelector('.Box-content')) {
+        return;
+      }
+
+      var toggleButton = document.createElement('button');
+      var toggleIcon = document.createElement('span');
+      var toggleHint = document.createElement('span');
+
+      toggleHint.className = 'u-srOnly';
+      toggleIcon.className += 'u-icon-collapse Box-toggleIcon';
+      toggleButton.className = 'Box-toggleButton';
+      toggleButton.title = 'Zwiń/rozwiń sekcję';
+      toggleButton.appendChild(toggleIcon);
+      toggleButton.appendChild(toggleHint);
+      toggleButton.addEventListener('click', toggleBox.bind(box));
+      titleHeader.insertBefore(toggleButton, titleHeader.firstChild);
+    });
+  }
+
   function showEmail() {
     forEach(document.getElementsByClassName('u-contactLink'), function(link) {
       var icon = link.getElementsByClassName('u-icon')[0];
@@ -51,4 +78,5 @@ var WebFontConfig = {
   showEmail();
   setRandomFortune();
   addSectionAnchors();
+  makeSectionsTogglable();
 })();

@@ -7,7 +7,7 @@ PORT        = 8080
 
 CSSDIR      = static/css/
 OUTDIR      = static/
-CONTENT     = $(OUTDIR)index.html $(addprefix $(OUTDIR),$(addsuffix /index.html,projekty haslo wget/rekurencja))
+CONTENT     = $(OUTDIR)index.html $(addprefix $(OUTDIR),$(addsuffix /index.html,haslo wget/rekurencja))
 OUTPUT      = $(CONTENT) $(OUTDIR)css/style.css
 
 all: $(OUTPUT)

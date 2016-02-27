@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:    url('../fonts/icomoon.eot?9ug8hi');
-    src:    url('../fonts/icomoon.eot?9ug8hi#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?9ug8hi') format('truetype'),
-    url('../fonts/icomoon.woff?9ug8hi') format('woff'),
-    url('../fonts/icomoon.svg?9ug8hi#icomoon') format('svg');
+    src:    url('../fonts/icomoon.eot?k97a63');
+    src:    url('../fonts/icomoon.eot?k97a63#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?k97a63') format('truetype'),
+        url('../fonts/icomoon.woff?k97a63') format('woff'),
+        url('../fonts/icomoon.svg?k97a63#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,22 +24,43 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.u-icon-time:before {
+    content: "\f017";
+}
 .u-icon-writing:before {
     content: "\f02d";
 }
-.u-icon-mail:before {
+.u-icon-github:before {
+    content: "\f09b";
+}
+.u-icon-email:before {
     content: "\f0e0";
 }
 .u-icon-projects:before {
+    content: "\f0eb";
+}
+.u-icon-collapse:before {
+    content: "\f107";
+}
+.u-icon-code:before {
     content: "\f121";
 }
+.u-icon-html5:before {
+    content: "\f13b";
+}
+.u-icon-feed:before {
+    content: "\f143";
+}
+.u-icon-windows:before {
+    content: "\f17a";
+}
+.u-icon-android:before {
+    content: "\f17b";
+}
+.u-icon-linux:before {
+    content: "\f17c";
+}
 .u-icon-facebook:before {
-    content: "\e900";
-}
-.u-icon-rss:before {
-    content: "\e901";
-}
-.u-icon-github:before {
-    content: "\e902";
+    content: "\f230";
 }
 

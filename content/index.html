@@ -9,23 +9,59 @@ title: "Strona główna"
 </section>
 <section id="teksty" class="Box">
   <h2 class="Box-title">Teksty</h2>
-  <ul class="Writings">
-    {{#topWritings}}
+  <ul class="Writings Box-content">
+    {{#allWritings}}
       <li class="Writing">
+        <div class="Writing-labels">
+          {{#labels}}
+            <button class="Writing-label">
+              {{#icon}}<span class="Writing-icon u-icon-{{icon}}"></span>{{/icon}}
+              {{name}}
+            </button>
+          {{/labels}}
+        </div>
         <a href="{{url}}">
           <span class="Writing-title">{{title}}</span>
           <span class="Writing-description">{{#description}}{{description}}{{/description}}</span>
         </a>
       </li>
-    {{/topWritings}}
+    {{/allWritings}}
   </ul>
+</section>
+<section id="strony" class="Box">
+  <h2 class="Box-title">Strony WWW</h2>
+  <div class="Box-content">
+    <article class="Project">
+      <h3 class="Project-name">OverDocs</h3>
+      <div class="Project-details"><p>Zbiór praktycznych porad i&nbsp;rozwiązań dla programistów.</p></div>
+      <p class="Project-links">
+        <a href="http://overdocs.net/" class="Project-link Project-link--view">Zobacz online</a>
+        <a href="http://github.com/overdocs/overdocs" class="Project-link Project-link--source">Kod na GitHubie</a>
+      </p>
+    </article>
+  </div>
+</section>
+<section id="aplikacje" class="Box">
+  <h2 class="Box-title">Aplikacje</h2>
+  <div class="Box-content">
+    <article class="Project">
+      <h3 class="Project-name">WordPress Link Checker</h3>
+      <div class="Project-details">
+        <p>Wyszukuje adresy URL w&nbsp;postach na blogu, a&nbsp;następnie sprawdza ich dostępność.</p>
+        <p><strong>Sposób użycia:</strong> Pobrać plik <a href="https://raw.githubusercontent.com/winek/wordpress-link-checker/master/check.php" download><code>check.php</code></a>, umieścić w&nbsp;głównym katalogu bloga, uruchomić w&nbsp;przeglądarce internetowej.</p>
+      </div>
+      <p class="Project-links">
+        <a href="https://raw.githubusercontent.com/winek/wordpress-link-checker/master/check.php" class="Project-link Project-link--download" download>Pobierz</a>
+        <a href="http://github.com/winek/wordpress-link-checker" class="Project-link Project-link--source">Kod na GitHubie</a>
+      </p>
+    </article>
+  </div>
 </section>
 <section id="kontakt" class="Box">
   <h2 class="Box-title">Ja w internecie</h2>
-  <ul class="Contact">
-    <li><a href="/projekty/"><span class="u-icon u-icon-projects"></span>Projekty</a></li>
+  <ul class="Contact Box-content">
     <li><a href="https://github.com/winek"><span class="u-icon u-icon-github"></span>GitHub</a></li>
-    <li><a class="u-contactLink" href="/hello"><span class="u-icon u-icon-mail">Email</span>Zapytaj</a></li>
+    <li><a class="u-contactLink" href="/hello"><span class="u-icon u-icon-email">Email</span>Zapytaj</a></li>
   </ul>
 </section>
 {{> footer}}

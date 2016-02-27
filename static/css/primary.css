@@ -18,7 +18,8 @@ a:hover {
 
 .u-clearfix::after,
 .Box-title::after,
-.Box::after {
+.Box::after,
+.Writings::after {
   content: "";
   display: table;
   clear: both;
@@ -49,12 +50,27 @@ a:hover {
   font-size: 1.7em;
   line-height: 1.13;
 }
+.Box-title--collapsible {
+  cursor: pointer;
+}
+.Box--collapsed .Box-title {
+  margin: 0;
+}
 .Box p {
   margin: 0;
   text-indent: 1.5em;
 }
 .Box p:first-of-type {
   text-indent: 0;
+}
+.Box-content {
+  margin: 0 -1.25em;
+  max-height: 100%;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.Box--collapsed .Box-content {
+  position: absolute;
 }
 
 .Footer {
@@ -82,6 +98,38 @@ a:hover {
   position: static;
 }
 
+.Box-toggleButton {
+  background: transparent;
+  border: none;
+  color: #777;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  transition: 0.2s linear all;
+  display: inline-block;
+  width: 0;
+  height: 1em;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  opacity: 0;
+}
+.Box-toggleIcon {
+  font-size: .8em;
+  display: block;
+  line-height: 1;
+}
+.Box--collapsed .Box-toggleButton,
+.Box:hover .Box-toggleButton,
+.Box-toggleButton:focus {
+  width: .8em;
+  margin-right: 8px;
+  opacity: 1;
+}
+.Box--collapsed .Box-toggleButton {
+  transform: rotate(-90deg);
+}
+
 .Contact {
   list-style: none;
   padding: 0;
@@ -91,10 +139,10 @@ a:hover {
   color: #eee;
   display: inline-block;
   text-align: center;
+  vertical-align: middle;
   width: 1em;
   max-height: 1.5em;
   margin-right: .25em;
-  vertical-align: middle;
   overflow: hidden;
 }
 .Contact a {
@@ -109,21 +157,21 @@ a:hover {
   border-top-color: #3bd;
 }
 #teksty {
-  border-top-color: #d77;
+  border-top-color: #da3;
 }
 
 #strony {
-  border-top-color: #da3;
+  border-top-color: #e84;
 }
 #strony .Project-link:first-child {
-  background: #da3;
+  background: #e84;
 }
 
 #aplikacje {
-  border-top-color: #e74;
+  border-top-color: #d76;
 }
 #aplikacje .Project-link:first-child {
-  background: #e74;
+  background: #e65;
 }
 
 .Box--article {
@@ -132,7 +180,7 @@ a:hover {
 
 .Project {
   padding: 1em 1.25em;
-  margin: 1em -1.25em;
+  margin: 1em 0;
   background: #555;
   border-bottom: 2px #333 solid;
 }
@@ -187,14 +235,13 @@ code {
 .Writings {
   margin: 0;
   padding: 0;
-  font-size: .9em;
 }
 .Writing {
   list-style: none;
-  text-align: center;
+  font-size: .8em;
+  padding: .6em 0;
 }
 .Writing a {
-  padding: .5em 0;
   display: block;
 }
 .Writing-title {
@@ -209,6 +256,35 @@ code {
 }
 .Writing-description {
   color: #777;
+}
+.Writing-labels {
+  opacity: .75;
+  padding-bottom: .3em;
+  transition: all 0.1s;
+}
+.Writing-labels:hover {
+  opacity: 1;
+}
+.Writing-label {
+  font-weight: bold;
+  font-size: .85em;
+  background: #555;
+  padding: 3px 6px;
+  display: inline-block;
+  opacity: .75;
+  border: #404040 solid;
+  border-width: 0 0 2px 0;
+  color: #eee;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.Writing-labels:hover .Writing-label {
+  background: #666;
+  border-bottom: 2px #333 solid;
+}
+.Writing-label:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 641px) {
@@ -230,6 +306,11 @@ code {
   }
   .Writings {
     font-size: 1.1em;
+  }
+  .Writing {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
   }
   .Footer {
     width: 100%;
