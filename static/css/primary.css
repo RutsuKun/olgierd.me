@@ -232,7 +232,7 @@ pre {
   margin-left: 1.5em;
 }
 code {
-  font: .8em Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font: .8em 'PT Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 }
 .Box--article h3 {
   font-size: 1.3em;

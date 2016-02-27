@@ -1,5 +1,5 @@
 var WebFontConfig = {
-  google: { families: [ 'PT+Serif:400,700:latin,latin-ext' ] }
+  google: { families: [ 'PT+Serif:400,700:latin,latin-ext', 'PT+Mono::latin,latin-ext' ] }
 };
 (function(doc) {
   var wf = document.createElement('script');
