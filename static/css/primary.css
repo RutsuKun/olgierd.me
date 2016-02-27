@@ -293,6 +293,7 @@ code {
 .Writings-resetButton {
   font-family: inherit;
   font-size: .4em;
+  font-weight: bold;
   display: inline-block;
   background: #777;
   opacity: .8;
