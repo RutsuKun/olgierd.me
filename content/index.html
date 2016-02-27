@@ -14,10 +14,10 @@ title: "Strona główna"
       <li class="Writing">
         <div class="Writing-labels">
           {{#labels}}
-            <button class="Writing-label">
+            <span class="Writing-label" data-label="{{name}}">
               {{#icon}}<span class="Writing-icon u-icon-{{icon}}"></span>{{/icon}}
               {{name}}
-            </button>
+            </span>
           {{/labels}}
         </div>
         <a href="{{url}}">

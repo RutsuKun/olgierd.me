@@ -243,6 +243,7 @@ code {
 }
 .Writing a {
   display: block;
+  color: #ddd;
 }
 .Writing-title {
   display: block;
@@ -285,6 +286,22 @@ code {
 }
 .Writing-label:hover {
   opacity: 1;
+}
+.Writing--filtered {
+  display: none;
+}
+.Writings-resetButton {
+  font-family: inherit;
+  font-size: .4em;
+  display: inline-block;
+  background: #777;
+  opacity: .8;
+  color: #fff;
+  padding: .5em .75em;
+  border-bottom: #444 solid;
+  border-width: 0 0 4px 0;
+  cursor: pointer;
+  margin-left: 16px;
 }
 
 @media screen and (min-width: 641px) {
