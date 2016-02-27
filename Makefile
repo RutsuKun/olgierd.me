@@ -22,7 +22,7 @@ $(OUTDIR)%/index.html: content/%.html $(OUTDIR) config.js partials/footer.mustac
 	mkdir -p $(OUTDIR)$(*F)
 	$(NODE) tools/compile.js < $< > $@
 
-$(OUTDIR)%/index.html: content/%.md $(OUTDIR) config.js partials/footer.mustache partials/header.mustache
+$(OUTDIR)%/index.html: content/%.md $(OUTDIR) config.js partials/footer.mustache partials/header.mustache tools/markdown.mustache
 	mkdir -p $(@D)
 	$(NODE) tools/compile-markdown.js < $< > $@
 
