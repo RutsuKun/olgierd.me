@@ -173,15 +173,15 @@ a:hover {
 pre {
   overflow-x: auto;
   background: #333;
-  padding: 1em;
+  padding: 16px 16px 12px 16px;
   margin-left: 1.5em;
 }
 code {
   font: .8em Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 }
 .Box--article h3 {
-  font-size: 1.6em;
-  margin-bottom: 0;
+  font-size: 1.3em;
+  margin-bottom: .25em;
 }
 
 .Writings {
@@ -233,5 +233,19 @@ code {
   }
   .Footer {
     width: 100%;
+  }
+}
+
+@media print {
+  .Header, .Footer {
+    clip: rect(0 0 0 0);
+    position: absolute;
+  }
+  .Box {
+    border: 0;
+    padding: 0;
+  }
+  .Box pre {
+    border: 0;
   }
 }
