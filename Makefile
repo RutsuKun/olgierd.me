@@ -7,7 +7,7 @@ PORT        = 8080
 
 CSSDIR      = static/css/
 OUTDIR      = static/
-CONTENT     = $(OUTDIR)index.html $(addprefix $(OUTDIR),$(addsuffix /index.html,projekty haslo))
+CONTENT     = $(OUTDIR)index.html $(addprefix $(OUTDIR),$(addsuffix /index.html,projekty haslo wget/rekurencja))
 OUTPUT      = $(CONTENT) $(OUTDIR)css/style.css
 
 all: $(OUTPUT)
@@ -23,7 +23,7 @@ $(OUTDIR)%/index.html: content/%.html $(OUTDIR) config.js partials/footer.mustac
 	$(NODE) tools/compile.js < $< > $@
 
 $(OUTDIR)%/index.html: content/%.md $(OUTDIR) config.js partials/footer.mustache partials/header.mustache
-	mkdir -p $(OUTDIR)$(*F)
+	mkdir -p $(@D)
 	$(NODE) tools/compile-markdown.js < $< > $@
 
 $(OUTDIR):
