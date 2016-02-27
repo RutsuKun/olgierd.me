@@ -8,6 +8,7 @@ var PROGRAMMING = { "icon": "code", "name": "Programowanie" };
 
 module.exports = {
   "name": "Olgierd Grzyb",
+  "revision": require('./tools/current-revision'),
   "description": "Jestem studentem. W kręgu moich zainteresowań leży przede wszystkim web development, czyli potocznie – robienie internetów, a także systemy Linux.",
   "allWritings": [
     {
