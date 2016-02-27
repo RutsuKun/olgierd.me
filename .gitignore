@@ -2,6 +2,6 @@
 node_modules
 
 # Generated files
-/static/*/index.html
+/static/**/index.html
 /static/index.html
 /static/css/style.css
