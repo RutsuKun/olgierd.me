@@ -72,6 +72,13 @@ a:hover {
 .Box--collapsed .Box-content {
   position: absolute;
 }
+.Article-footer {
+  text-align: right;
+  margin-top: 1.5em;
+  color: #777;
+  font-style: italic;
+  font-size: .8em;
+}
 
 .Footer {
   color: #666;

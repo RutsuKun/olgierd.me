@@ -14,6 +14,11 @@ var input = '';
 require('./process-input')(input => {
   let data = fm(input);
   let content = marked(data.body);
-  let attributes = Object.assign({ content, stylesheets: [{ url: '/css/light.css?' + config.revision }] }, config, data.attributes);
+  let attributes = Object.assign({
+    content,
+    stylesheets: [{
+      url: '/css/light.css?' + config.revision
+    }]
+  }, config, data.attributes);
   return mustache.render(template, attributes, partials);
 });
