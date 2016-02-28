@@ -23,4 +23,6 @@ Jeśli zaś interesują nas wyłącznie konkretne pliki, np. PDF-y, to zamiast t
 
 Inne użyteczne opcje to `--no-directories`, która ignoruje strukturę folderów, czy `--domains` ograniczająca adresy, z&nbsp;których chcemy pobierać pliki.
 
+Niekiedy przy serwerach SSL trzeba dopisywać --no-check-certificate z powodu problemów z certyfikatem SSL.
+
 Po więcej ustawień polecam zajrzeć do [manuala wget](http://man.cx/wget).
